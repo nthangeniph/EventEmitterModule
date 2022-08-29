@@ -58,7 +58,10 @@ module.exports=class EventEmitter {
     // If the once() event has been fired, then that will not be part of
     // the return array
     rawListeners(eventName) {
-      return this.listeners[eventName];
+     
+     return this.listeners[eventName];
     }
-  
+    eventNames(){
+      return Object.keys(this.listeners);
+    }
   }
